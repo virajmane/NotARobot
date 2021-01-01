@@ -22,12 +22,9 @@ def index():
     <button type"submit">submit</button>
     '''
   elif request.method=="POST":
-    print("not")
     ip = request.form["ip"]
-    print(ip)
-    print(num1)
     if int(ip)==int(num1):
-      return "Success"
+      return '{"status":Success}'
     else:
       return redirect(url_for(".index"))
 
